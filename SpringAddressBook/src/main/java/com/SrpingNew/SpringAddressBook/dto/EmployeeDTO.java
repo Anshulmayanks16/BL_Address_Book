@@ -7,6 +7,10 @@ public class EmployeeDTO {
     String email;
 
     Long id;
+
+    public EmployeeDTO(String name, String email, Long id) {
+    }
+
     public String getName(){
         return name;
     }
