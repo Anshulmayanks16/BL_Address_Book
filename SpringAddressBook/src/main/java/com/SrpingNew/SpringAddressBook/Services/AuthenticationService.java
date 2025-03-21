@@ -65,7 +65,7 @@ public class AuthenticationService implements IAuthInterface {
     }
 
 
-    public String login(LoginDTO user){
+    public String login(LoginDTO user, MockHttpServletResponse response){
 
         List<AuthUser> l1 = userRepository.findAll().stream().filter(authuser -> authuser.getEmail().equals(user.getEmail())).collect(Collectors.toList());
         if(l1.size() == 0) {

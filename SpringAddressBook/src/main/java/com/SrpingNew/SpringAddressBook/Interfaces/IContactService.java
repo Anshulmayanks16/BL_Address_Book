@@ -14,7 +14,7 @@ public interface IContactService {
 
     public ContactDTO get(Long id);
 
-    public ContactDTO create(ContactDTO user);
+    public ContactDTO create(ContactDTO user, MockHttpServletRequest request);
 
     public String clear();
 

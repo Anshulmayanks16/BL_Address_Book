@@ -11,7 +11,6 @@ import com.SrpingNew.SpringAddressBook.entities.ContactEntity;
 import com.SrpingNew.SpringAddressBook.repositories.ContactRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.v3.oas.models.info.Contact;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,7 +49,7 @@ public class ContactService implements IContactService {
         return null;
     }
 
-    public ContactDTO create(ContactDTO user){
+    public ContactDTO create(ContactDTO user, MockHttpServletRequest request){
         try {
 
             ContactEntity foundEntity = contactRepository.findByEmail(user.getEmail());

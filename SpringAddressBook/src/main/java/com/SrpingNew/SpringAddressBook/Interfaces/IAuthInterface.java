@@ -14,9 +14,11 @@ public interface IAuthInterface {
     public String register (AuthUserDTO user) throws Exception;
 
 
-    public String login(LoginDTO user);
+    public String login(LoginDTO user, MockHttpServletResponse response);
 
     public AuthUserDTO forgotPassword(PassDTO pass, String email) throws Exception;
 
     public String resetPassword(String email, String currentPass, String newPass) throws Exception;
+
+    void clear();
 }

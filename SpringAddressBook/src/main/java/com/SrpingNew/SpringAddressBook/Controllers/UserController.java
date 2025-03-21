@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping(path ="/login")
     public String login(@RequestBody LoginDTO user) throws Exception{
         log.info("Employee tried to login with body: {}", obj.writeValueAsString(user));
-        return iAuthInterface.login(user);
+        return iAuthInterface.login(user, response);
     }
 
     //UC11 --> For sending mail to another person
